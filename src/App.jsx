@@ -1,20 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Landing from "./pages/Landing";
-import Dashboard from "./pages/Dashboard";
-
-import "./App.css";
-
 function App() {
   return (
-    <BrowserRouter>
-      <div className="app">
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="min-h-screen bg-black flex items-center justify-center">
+      <h1 className="text-6xl font-bold text-purple-500">
+        Genesis Studio Alpha 2 🚀
+      </h1>
+    </div>
   );
 }
 
