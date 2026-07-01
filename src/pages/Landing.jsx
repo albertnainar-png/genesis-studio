@@ -1,58 +1,82 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../styles/landing.css";
 
 function Landing() {
-  const navigate = useNavigate();
-
   return (
-    <div
-      style={{
-        height: "100vh",
-        background: "#07070A",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        fontFamily: "Inter, Arial, sans-serif",
-      }}
-    >
-      <h1
-        style={{
-          fontSize: "72px",
-          fontWeight: "700",
-          marginBottom: "35px",
-          background: "linear-gradient(90deg,#7C3AED,#A855F7,#C084FC)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-        }}
-      >
-        Genesis Studio
-      </h1>
+    <div className="landing">
 
-      <p
-        style={{
-          color: "#D4D4D8",
-          fontSize: "24px",
-          letterSpacing: "3px",
-          marginBottom: "50px",
-        }}
-      >
-        Powered by ELINA
-      </p>
+      <div className="landing-overlay"></div>
 
-      <button
-        onClick={() => navigate("/dashboard")}
-        style={{
-          background: "linear-gradient(90deg,#7C3AED,#9333EA)",
-          color: "white",
-          border: "none",
-          padding: "18px 48px",
-          borderRadius: "14px",
-          fontSize: "22px",
-          cursor: "pointer",
-        }}
-      >
-        Begin Creating
-      </button>
+      <div className="landing-content">
+
+        <div className="brand">
+
+          <div className="brand-logo">
+            G
+          </div>
+
+          <div>
+
+            <h1>Genesis Studio</h1>
+
+            <p>Powered by ELINA</p>
+
+          </div>
+
+        </div>
+
+        <div className="hero-text">
+
+          <span className="tag">
+            THE CREATIVE OPERATING SYSTEM
+          </span>
+
+          <h2>
+            One Idea.
+            <br />
+            Endless Creation.
+          </h2>
+
+          <p>
+            Create cinematic videos, original music, artwork and AI voices
+            from one unified creative workspace.
+          </p>
+
+          <div className="hero-buttons">
+
+            <Link to="/dashboard" className="primary-btn">
+              Enter Studio →
+            </Link>
+
+            <button className="secondary-btn">
+              Watch Demo
+            </button>
+
+          </div>
+
+        </div>
+
+        <div className="stats">
+
+          <div className="stat-card">
+            <h3>4</h3>
+            <span>Creative Studios</span>
+          </div>
+
+          <div className="stat-card">
+            <h3>1</h3>
+            <span>AI Assistant</span>
+          </div>
+
+          <div className="stat-card">
+            <h3>∞</h3>
+            <span>Creative Possibilities</span>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   );
 }

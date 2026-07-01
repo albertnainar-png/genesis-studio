@@ -1,0 +1,260 @@
+.hero-orb-container{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    min-height:420px;
+
+}
+
+/* ===========================
+   ELINA CORE
+=========================== */
+
+.hero-orb{
+
+    position:relative;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        radial-gradient(circle at 30% 30%,
+        #E9D5FF,
+        #A855F7 35%,
+        #7C3AED 70%,
+        #3B0764);
+
+    box-shadow:
+        0 0 40px rgba(168,85,247,.45),
+        0 0 120px rgba(168,85,247,.25);
+
+    z-index:5;
+
+}
+
+/* ===========================
+   INNER GLOW
+=========================== */
+
+.orb-glow{
+
+    position:absolute;
+
+    inset:-25px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+        rgba(168,85,247,.35),
+        transparent 70%);
+
+    filter:blur(20px);
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.orb-text{
+
+    position:relative;
+
+    color:white;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    letter-spacing:8px;
+
+    z-index:10;
+
+}
+
+/* ===========================
+   RINGS
+=========================== */
+
+.orb-ring{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid rgba(168,85,247,.28);
+
+    animation:spin 30s linear infinite;
+
+}
+
+.ring-1{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+.ring-2{
+
+    width:390px;
+
+    height:390px;
+
+    animation-direction:reverse;
+
+}
+
+.ring-3{
+
+    width:480px;
+
+    height:480px;
+
+}
+
+.ring-4{
+
+    width:580px;
+
+    height:580px;
+
+    animation-duration:45s;
+
+}
+
+/* ===========================
+   PARTICLES
+=========================== */
+
+.particle{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#C084FC;
+
+    box-shadow:0 0 20px #C084FC;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+.p1{
+
+    top:15%;
+
+    left:30%;
+
+}
+
+.p2{
+
+    top:25%;
+
+    right:22%;
+
+    animation-delay:1s;
+
+}
+
+.p3{
+
+    bottom:20%;
+
+    left:25%;
+
+    animation-delay:2s;
+
+}
+
+.p4{
+
+    bottom:30%;
+
+    right:18%;
+
+    animation-delay:3s;
+
+}
+
+.p5{
+
+    top:50%;
+
+    right:10%;
+
+    animation-delay:4s;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+        opacity:.5;
+
+    }
+
+}

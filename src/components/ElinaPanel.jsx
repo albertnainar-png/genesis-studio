@@ -2,19 +2,67 @@ import "../styles/elina.css";
 
 function ElinaPanel() {
   return (
-    <div className="elina-panel">
+    <aside className="elina-panel">
 
-      <h2>🤖 ELINA</h2>
+      <div className="elina-top">
 
-      <p>Describe what you'd like to create.</p>
+        <div className="elina-badge">
+          AI
+        </div>
 
-      <textarea
-        placeholder="Create a cinematic worship video about David facing Goliath..."
-      ></textarea>
+        <div>
 
-      <button>Generate</button>
+          <h2>ELINA</h2>
 
-    </div>
+          <p>Genesis AI Creative Assistant</p>
+
+        </div>
+
+      </div>
+
+      <div className="status-card">
+
+        <span className="status-dot"></span>
+
+        <span>Online</span>
+
+      </div>
+
+      <div className="prompt-card">
+
+        <label>What are we creating today?</label>
+
+        <textarea
+          placeholder="Describe your idea...
+
+Example:
+
+Create a cinematic worship video about David defeating Goliath.
+
+Generate matching music and artwork."
+        ></textarea>
+
+      </div>
+
+      <div className="quick-prompts">
+
+        <button>Video</button>
+
+        <button>Music</button>
+
+        <button>Artwork</button>
+
+        <button>Voice</button>
+
+      </div>
+
+      <button className="generate-button">
+
+        Generate with ELINA
+
+      </button>
+
+    </aside>
   );
 }
 

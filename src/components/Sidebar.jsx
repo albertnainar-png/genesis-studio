@@ -1,23 +1,38 @@
 import "../styles/sidebar.css";
 
+const menuItems = [
+  { title: "Dashboard", icon: "🏠" },
+  { title: "Video Studio", icon: "🎬" },
+  { title: "Music Studio", icon: "🎵" },
+  { title: "Artwork Studio", icon: "🎨" },
+  { title: "Voice Studio", icon: "🎙" },
+  { title: "Projects", icon: "📁" },
+  { title: "Settings", icon: "⚙️" },
+];
+
 function Sidebar() {
   return (
     <aside className="sidebar">
+      <div className="sidebar-title">
+        Workspace
+      </div>
 
-      <h2>MENU</h2>
+      <nav>
+        {menuItems.map((item) => (
+          <button key={item.title} className="menu-item">
+            <span>{item.icon}</span>
+            {item.title}
+          </button>
+        ))}
+      </nav>
 
-      <button>🏠 Dashboard</button>
+      <div className="sidebar-footer">
+        <div className="version">
+          Alpha 1
+        </div>
 
-      <button>🎬 Videos</button>
-
-      <button>🎵 Music</button>
-
-      <button>🎨 Artwork</button>
-
-      <button>🎙 Voice</button>
-
-      <button>⚙ Settings</button>
-
+        <p>Genesis Studio</p>
+      </div>
     </aside>
   );
 }
