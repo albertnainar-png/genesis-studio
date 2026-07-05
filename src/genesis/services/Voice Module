@@ -1,0 +1,15 @@
+class VoiceModule {
+
+    create() {
+
+        return {
+
+            module: "Voice"
+
+        };
+
+    }
+
+}
+
+export default VoiceModule;

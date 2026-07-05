@@ -1,0 +1,15 @@
+class ArtworkModule {
+
+    create() {
+
+        return {
+
+            module: "Artwork"
+
+        };
+
+    }
+
+}
+
+export default ArtworkModule;

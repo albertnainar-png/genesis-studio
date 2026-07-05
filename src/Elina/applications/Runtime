@@ -1,0 +1,15 @@
+class Runtime {
+
+    start(application) {
+
+        console.log(
+
+            `${application.name} launched.`
+
+        );
+
+    }
+
+}
+
+export default Runtime;

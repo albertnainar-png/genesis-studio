@@ -1,0 +1,15 @@
+class MusicModule {
+
+    create() {
+
+        return {
+
+            module: "Music"
+
+        };
+
+    }
+
+}
+
+export default MusicModule;

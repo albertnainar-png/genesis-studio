@@ -1,0 +1,19 @@
+import Application from "../Application";
+
+class GenesisApplication extends Application {
+
+    constructor() {
+
+        super(
+
+            "genesis-studio",
+
+            "Genesis Studio"
+
+        );
+
+    }
+
+}
+
+export default GenesisApplication;

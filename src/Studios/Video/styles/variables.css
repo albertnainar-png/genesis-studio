@@ -1,0 +1,224 @@
+/* ==========================================================
+   Genesis AI
+   Nebula Design System
+   Global Variables
+========================================================== */
+
+:root {
+
+  /* ======================================================
+     Brand
+  ====================================================== */
+
+  --brand-primary: #8B5CF6;
+  --brand-secondary: #C026D3;
+  --brand-accent: #06B6D4;
+
+  /* ======================================================
+     Backgrounds
+  ====================================================== */
+
+  --background: #06060A;
+  --background-secondary: #0D0D14;
+  --background-tertiary: #151522;
+  --background-hover: #1B1B28;
+
+  /* ======================================================
+     Panels
+  ====================================================== */
+
+  --panel: #101018;
+  --panel-hover: #161624;
+  --panel-active: #1D1D2F;
+
+  /* ======================================================
+     Borders
+  ====================================================== */
+
+  --border: rgba(255,255,255,.08);
+  --border-hover: rgba(139,92,246,.35);
+  --border-active: rgba(139,92,246,.55);
+
+  /* ======================================================
+     Text
+  ====================================================== */
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #D4D4D8;
+  --text-muted: #A1A1AA;
+  --text-disabled: #71717A;
+
+  /* ======================================================
+     Status Colors
+  ====================================================== */
+
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #3B82F6;
+
+  /* ======================================================
+     ELINA
+  ====================================================== */
+
+  --elina-purple: #7C3AED;
+  --elina-magenta: #D946EF;
+  --elina-cyan: #06B6D4;
+
+  /* ======================================================
+     Gradients
+  ====================================================== */
+
+  --gradient-primary:
+    linear-gradient(
+      135deg,
+      #7C3AED,
+      #D946EF
+    );
+
+  --gradient-secondary:
+    linear-gradient(
+      135deg,
+      #312E81,
+      #7C3AED
+    );
+
+  --gradient-panel:
+    linear-gradient(
+      180deg,
+      #11111A,
+      #0A0A10
+    );
+
+  --gradient-background:
+    radial-gradient(
+      circle at top right,
+      rgba(124,58,237,.12),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(6,182,212,.08),
+      transparent 35%
+    ),
+    #06060A;
+
+  /* ======================================================
+     Shadows
+  ====================================================== */
+
+  --shadow-sm:
+    0 2px 10px rgba(0,0,0,.15);
+
+  --shadow-md:
+    0 8px 30px rgba(0,0,0,.25);
+
+  --shadow-lg:
+    0 20px 50px rgba(0,0,0,.45);
+
+  --shadow-purple:
+    0 0 40px rgba(139,92,246,.35);
+
+  --shadow-glow:
+    0 0 70px rgba(217,70,239,.35);
+
+  /* ======================================================
+     Radius
+  ====================================================== */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  /* ======================================================
+     Typography
+  ====================================================== */
+
+  --font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 22px;
+  --font-2xl: 30px;
+  --font-3xl: 40px;
+  --font-4xl: 56px;
+
+  /* ======================================================
+     Spacing
+  ====================================================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* ======================================================
+     Animation
+  ====================================================== */
+
+  --transition-fast: .15s;
+  --transition: .25s;
+  --transition-slow: .4s;
+
+}
+
+/* ==========================================================
+   Global Defaults
+========================================================== */
+
+html,
+body,
+#root {
+
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+
+  background: var(--gradient-background);
+
+  color: var(--text-primary);
+
+  font-family: var(--font-family);
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+*,
+*::before,
+*::after {
+
+  box-sizing: border-box;
+
+}
+
+button,
+input,
+textarea,
+select {
+
+  font-family: inherit;
+
+}

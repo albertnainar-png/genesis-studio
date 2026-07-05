@@ -1,0 +1,35 @@
+class EventBus {
+
+    constructor() {
+
+        this.events = {};
+
+    }
+
+    subscribe(event, callback) {
+
+        if (!this.events[event])
+
+            this.events[event] = [];
+
+        this.events[event].push(callback);
+
+    }
+
+    publish(event, payload) {
+
+        if (!this.events[event])
+
+            return;
+
+        this.events[event].forEach(
+
+            callback => callback(payload)
+
+        );
+
+    }
+
+}
+
+export default EventBus;

@@ -1,11 +1,7 @@
+import VideoStudio from "./Studios/Video";
+
 function App() {
-  return (
-    <div className="min-h-screen bg-black flex items-center justify-center">
-      <h1 className="text-6xl font-bold text-purple-500">
-        Genesis Studio Alpha 2 🚀
-      </h1>
-    </div>
-  );
+  return <VideoStudio />;
 }
 
 export default App;

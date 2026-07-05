@@ -1,0 +1,19 @@
+class Planner {
+
+    plan(goal) {
+
+        return {
+
+            goal,
+
+            tasks: [],
+
+            status: "planned"
+
+        };
+
+    }
+
+}
+
+export default Planner;

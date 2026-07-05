@@ -1,0 +1,15 @@
+class VideoModule {
+
+    create() {
+
+        return {
+
+            module: "Video"
+
+        };
+
+    }
+
+}
+
+export default VideoModule;

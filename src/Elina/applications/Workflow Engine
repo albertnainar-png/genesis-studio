@@ -1,0 +1,17 @@
+class WorkflowEngine {
+
+    execute(plan) {
+
+        return {
+
+            status: "running",
+
+            plan
+
+        };
+
+    }
+
+}
+
+export default WorkflowEngine;

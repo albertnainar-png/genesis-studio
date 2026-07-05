@@ -1,0 +1,17 @@
+class ExecutionManager {
+
+    execute(skill) {
+
+        console.log(
+
+            "Executing:",
+
+            skill
+
+        );
+
+    }
+
+}
+
+export default ExecutionManager;

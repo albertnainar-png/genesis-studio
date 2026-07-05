@@ -1,0 +1,7 @@
+import ELINA from "../core/ELINA";
+
+export function ask() {
+
+    return ELINA.status();
+
+}

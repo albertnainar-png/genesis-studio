@@ -1,0 +1,29 @@
+class Journal {
+
+    constructor() {
+
+        this.entries = [];
+
+    }
+
+    log(entry) {
+
+        this.entries.push({
+
+            time: new Date(),
+
+            entry
+
+        });
+
+    }
+
+    history() {
+
+        return this.entries;
+
+    }
+
+}
+
+export default Journal;

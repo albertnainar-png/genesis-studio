@@ -1,0 +1,19 @@
+class Governance {
+
+    approve(action) {
+
+        return {
+
+            action,
+
+            approved: false,
+
+            requiresFounderApproval: true
+
+        };
+
+    }
+
+}
+
+export default Governance;

@@ -1,0 +1,17 @@
+class ContextBuilder {
+
+    build() {
+
+        return {
+
+            project: "Genesis Studio",
+
+            version: "Alpha 2.1"
+
+        };
+
+    }
+
+}
+
+export default ContextBuilder;

@@ -7,74 +7,157 @@ import {
   FolderOpen,
   Bot,
   Settings,
+  ChevronRight,
 } from "lucide-react";
 
 const menu = [
-  { icon: Home, label: "Dashboard", active: true },
-  { icon: Clapperboard, label: "Video Studio" },
-  { icon: Music4, label: "Music Studio" },
-  { icon: Image, label: "Artwork Studio" },
-  { icon: Mic2, label: "Voice Studio" },
-  { icon: FolderOpen, label: "Projects" },
-  { icon: Bot, label: "ELINA AI" },
-  { icon: Settings, label: "Settings" },
+  {
+    title: "Dashboard",
+    icon: Home,
+    active: true,
+  },
+  {
+    title: "Video Studio",
+    icon: Clapperboard,
+  },
+  {
+    title: "Music Studio",
+    icon: Music4,
+  },
+  {
+    title: "Artwork Studio",
+    icon: Image,
+  },
+  {
+    title: "Voice Studio",
+    icon: Mic2,
+  },
+  {
+    title: "Projects",
+    icon: FolderOpen,
+  },
+  {
+    title: "ELINA",
+    icon: Bot,
+  },
+  {
+    title: "Settings",
+    icon: Settings,
+  },
 ];
 
 function Sidebar() {
   return (
-    <aside className="flex w-72 flex-col justify-between border-r border-white/10 bg-black/30 backdrop-blur-xl">
+    <aside className="sticky top-20 flex h-[calc(100vh-80px)] w-72 flex-col border-r border-white/10 bg-[#09090F]">
 
-      <div className="px-6 pt-8">
+      {/* Workspace */}
 
-        <div className="mb-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet-400">
-            Workspace
-          </p>
+      <div className="border-b border-white/10 p-6">
+
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">
+          Workspace
+        </p>
+
+        <div className="mt-5 rounded-2xl border border-violet-500/20 bg-gradient-to-br from-violet-600/20 to-fuchsia-600/10 p-4">
+
+          <div className="flex items-center justify-between">
+
+            <div>
+
+              <h3 className="font-semibold text-white">
+                Genesis Studio
+              </h3>
+
+              <p className="mt-1 text-sm text-zinc-400">
+                Alpha 2.1
+              </p>
+
+            </div>
+
+            <div className="h-3 w-3 rounded-full bg-emerald-400"></div>
+
+          </div>
+
         </div>
+
+      </div>
+
+      {/* Navigation */}
+
+      <div className="flex-1 overflow-y-auto px-4 py-6">
+
+        <p className="mb-4 px-3 text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
+          Navigation
+        </p>
 
         <nav className="space-y-2">
 
           {menu.map((item) => {
+
             const Icon = item.icon;
 
             return (
               <button
-                key={item.label}
-                className={`group flex w-full items-center gap-4 rounded-2xl px-4 py-4 text-left transition-all duration-300 ${
+                key={item.title}
+                className={`group flex w-full items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 ${
                   item.active
-                    ? "bg-gradient-to-r from-violet-600/25 to-fuchsia-600/15 text-white border border-violet-500/30"
+                    ? "bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-violet-600/20"
                     : "text-zinc-400 hover:bg-white/5 hover:text-white"
                 }`}
               >
-                <Icon className="h-5 w-5 transition-transform group-hover:scale-110" />
+                <div className="flex items-center gap-4">
 
-                <span className="font-medium">
-                  {item.label}
-                </span>
+                  <Icon size={20} />
+
+                  <span className="font-medium">
+                    {item.title}
+                  </span>
+
+                </div>
+
+                <ChevronRight
+                  size={16}
+                  className={`transition ${
+                    item.active
+                      ? "opacity-100"
+                      : "opacity-0 group-hover:opacity-100"
+                  }`}
+                />
+
               </button>
             );
+
           })}
 
         </nav>
+
       </div>
 
-      <div className="border-t border-white/10 p-6">
+      {/* Footer */}
 
-        <div className="rounded-2xl bg-gradient-to-br from-violet-600/20 to-fuchsia-600/10 p-5">
+      <div className="border-t border-white/10 p-5">
 
-          <p className="text-xs uppercase tracking-widest text-violet-300">
-            Current Sprint
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+
+          <p className="text-sm font-semibold text-white">
+            ELINA Core
           </p>
 
-          <h3 className="mt-2 text-xl font-bold text-white">
-            Alpha 2
-          </h3>
-
-          <p className="mt-3 text-sm leading-6 text-zinc-400">
-            Nebula Release
-            <br />
-            Video Studio in development.
+          <p className="mt-2 text-sm leading-6 text-zinc-400">
+            AI Operating System is online and monitoring your workspace.
           </p>
+
+          <div className="mt-5 flex items-center justify-between">
+
+            <span className="text-xs text-zinc-500">
+              System Health
+            </span>
+
+            <span className="font-bold text-emerald-400">
+              99.98%
+            </span>
+
+          </div>
 
         </div>
 

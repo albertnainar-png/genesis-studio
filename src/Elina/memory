@@ -1,0 +1,27 @@
+class MemoryManager {
+
+    constructor() {
+
+        this.projects = [];
+
+        this.sessions = [];
+
+        this.decisions = [];
+
+    }
+
+    remember(item) {
+
+        this.decisions.push(item);
+
+    }
+
+    recall() {
+
+        return this.decisions;
+
+    }
+
+}
+
+export default MemoryManager;
