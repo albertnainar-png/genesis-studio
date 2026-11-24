@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import {
-  ArrowDownToLine, ArrowRight, AudioLines, Bot, Check, ChevronDown,
+  ArrowDownToLine, ArrowRight, Bot, Check,
   Clapperboard, Copy, FolderKanban, Home, Image as ImageIcon, Menu,
-  Mic2, Music2, Plus, Search, Settings2, Sparkles, WandSparkles, X
+  Mic2, Music2, Plus, Search, Settings2, Sparkles, WandSparkles
 } from "lucide-react";
 import "./App.css";
 
